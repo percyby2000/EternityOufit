@@ -1,0 +1,85 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark, cupcake;
+}
+
+:root {
+  /* Fuentes */
+  --font-body-family: "SF Mono", Menlo, Consolas, Monaco, "Liberation Mono", "Lucida Console", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-body-style: normal;
+  --font-body-weight: 400;
+  --font-body-weight-bold: 700;
+  --font-heading-family: "SF Mono", Menlo, Consolas, Monaco, "Liberation Mono", "Lucida Console", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-heading-style: normal;
+  --font-heading-weight: 400;
+  --font-body-scale: 1.0;
+  --font-heading-scale: 1.0;
+
+  /* Media */
+  --media-padding: 0px;
+  --media-border-opacity: 0.05;
+  --media-border-width: 1px;
+  --media-radius: 0px;
+  --media-shadow-opacity: 0.0;
+  --media-shadow-horizontal-offset: 0px;
+  --media-shadow-vertical-offset: 4px;
+  --media-shadow-blur-radius: 5px;
+  --media-shadow-visible: 0;
+
+  /* Página */
+  --page-width: 120rem;
+  --page-width-margin: 0rem;
+
+  /* Tarjetas de producto */
+  --product-card-image-padding: 0.0rem;
+  --product-card-corner-radius: 0.0rem;
+  --product-card-text-alignment: left;
+  --product-card-border-width: 0.0rem;
+  --product-card-border-opacity: 0.1;
+  --product-card-shadow-opacity: 0.0;
+  --product-card-shadow-visible: 0;
+  --product-card-shadow-horizontal-offset: 0.0rem;
+  --product-card-shadow-vertical-offset: 0.4rem;
+  --product-card-shadow-blur-radius: 0.5rem;
+
+  /* Tarjetas de colección */
+  --collection-card-image-padding: 0.0rem;
+  --collection-card-corner-radius: 0.0rem;
+  --collection-card-text-alignment: left;
+  --collection-card-border-width: 0.0rem;
+  --collection-card-border-opacity: 0.1;
+  --collection-card-shadow-opacity: 0.0;
+  --collection-card-shadow-visible: 0;
+  --collection-card-shadow-horizontal-offset: 0.0rem;
+  --collection-card-shadow-vertical-offset: 0.4rem;
+  --collection-card-shadow-blur-radius: 0.5rem;
+
+  /* Tarjetas de blog */
+  --blog-card-image-padding: 0.0rem;
+  --blog-card-corner-radius: 0.0rem;
+  --blog-card-text-alignment: left;
+  --blog-card-border-width: 0.0rem;
+  --blog-card-border-opacity: 0.1;
+  --blog-card-shadow-opacity: 0.0;
+  --blog-card-shadow-visible: 0;
+  --blog-card-shadow-horizontal-offset: 0.0rem;
+  --blog-card-shadow-vertical-offset: 0.4rem;
+  --blog-card-shadow-blur-radius: 0.5rem;
+}
+
+/* Aplicar las fuentes globalmente */
+body {
+  font-family: var(--font-body-family);
+  font-style: var(--font-body-style);
+  font-weight: var(--font-body-weight);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading-family);
+  font-style: var(--font-heading-style);
+  font-weight: var(--font-heading-weight);
+}
+
+
