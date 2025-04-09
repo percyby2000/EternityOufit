@@ -7,6 +7,7 @@ import { agregarAlCarrito } from "@/service/carrtito";
 import { CiShoppingCart } from "react-icons/ci";
 import { IoArrowBack } from "react-icons/io5";
 import ProductoNoEncontrado from "./ProductoNoEncontrado";
+import Image from "next/image";
 
 function DetalleProducto() {
     const params = useParams();
@@ -38,11 +39,14 @@ function DetalleProducto() {
                 <div className="md:w-1/2 flex flex-col gap-4">
                     {/* Imagen principal */}
                     <div className="w-full h-96  rounded-xl overflow-hidden">
-                        <img
+                        <Image
                             src={imagenPrincipal}
                             alt={`${producto.name} - Imagen principal`}
                             className="w-full h-full object-contain transition-transform duration-300 hover:scale-105"
-                        />
+                            width={1000}
+                            height={1000}
+                       
+                       />
                     </div>
 
                     {/* Miniaturas */}
@@ -57,10 +61,12 @@ function DetalleProducto() {
                                         : "border-gray-200 hover:border-black"
                                 }`}
                             >
-                                <img
+                                <Image
                                     src={img}
                                     alt={`Miniatura ${index + 1}`}
                                     className="w-full h-full object-contain"
+                                    width={1000}
+                                    height={1000}
                                 />
                             </button>
                         ))}

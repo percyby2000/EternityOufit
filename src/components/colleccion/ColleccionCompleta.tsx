@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { products } from "@/service/products";
 import Link from "next/link";
+import Image from "next/image";
 
 const ColeccionCompleta = () => {
   const [activeTab, setActiveTab] = useState("todos");
@@ -74,15 +75,19 @@ const ColeccionCompleta = () => {
             >
               <figure className="relative group">
                 <Link href={`/coleccion/${producto.id}`} className="block">
-                  <img
+                  <Image
                     src={producto.images[0]}
                     alt={producto.name}
                     className="h-64 w-full object-contain group-hover:hidden "
+                    width={1000}
+                    height={1000}
                   />
-                  <img
+                  <Image
                     src={producto.images[1]}
                     alt={`${producto.name} - alternate`}
                     className="h-64 w-full object-contain hidden group-hover:block"
+                    width={1000}
+                    height={1000}
                   />
                   {producto.isNew && (
                     <div className="badge badge-success absolute top-4 left-4 text-white ">

@@ -1,27 +1,34 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, ChangeEvent, FormEvent } from "react";
 import { FaPaperPlane } from "react-icons/fa";
 import emailjs from "emailjs-com";
 
+// Define la estructura del formulario
+interface FormData {
+  nombre: string;
+  email: string;
+  mensaje: string;
+}
+
 export default function SeccionContactos() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     nombre: "",
     email: "",
     mensaje: "",
   });
 
-  const [isSending, setIsSending] = useState(false);
-  const [successMessage, setSuccessMessage] = useState("");
+  const [isSending, setIsSending] = useState<boolean>(false);
+  const [successMessage, setSuccessMessage] = useState<string>("");
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSending(true);
 

@@ -1,16 +1,18 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import Link from "next/link";
 import { FaFacebook, FaInstagramSquare, FaShoppingCart, FaBars, FaTimes } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
+import Image from "next/image";
 
 function NavMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const urlFacebook = "https://www.facebook.com/profile.php?id=61574429741430";
   const urlInstagram = "https://www.instagram.com/eternityoutfitt/";
-  const urlWhatsapp = "https://wa.me/YOURNUMBER";
+  const urlWhatsapp = "https://wa.me/+51973103134";
+
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -23,10 +25,12 @@ function NavMenu() {
         {/* Logo */}
         <div>
           <Link href="/">
-            <img
+            <Image
               className="w-[50px] h-[50px] object-contain"
               src="/images/logo.webp"
               alt="logo"
+              width={50}
+              height={50}
             />
           </Link>
         </div>
@@ -76,7 +80,9 @@ function NavMenu() {
           {/* Logo for Mobile View */}
           <li className="md:hidden mb-6">
             <Link href="/" onClick={toggleMenu}>
-              <img
+              <Image
+                width={90}
+                height={90}
                 className="w-[90px] h-[90px] object-contain"
                 src="/images/logo.webp"
                 alt="logo"

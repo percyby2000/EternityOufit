@@ -1,11 +1,12 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { FaTrashAlt, FaShoppingBag, FaCreditCard, FaChevronRight } from "react-icons/fa";
+import { FaTrashAlt, FaShoppingBag, FaChevronRight } from "react-icons/fa";
 import { CartProduct } from "@/types/Product";
 import Link from "next/link";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { eliminarDelCarrito } from "@/service/carrtito";
 import { MdPayment } from "react-icons/md";
+import Image from "next/image";
 
 function CarritoContenido() {
   // Estado para los productos del carrito
@@ -85,10 +86,12 @@ function CarritoContenido() {
             <div className="rounded-lg border bg-white ">
               {productos.map((producto) => (
                 <div key={producto.id} className="p-4 border-b border-gray-100 flex space-x-4">
-                  <img
+                  <Image
                     src={producto.images[0]}
                     alt={producto.name}
                     className="w-20 h-20 object-contain rounded-md"
+                    width={80}
+                    height={80}
                   />
                   <div className="flex-grow">
                     <div className="flex justify-between">

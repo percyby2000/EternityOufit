@@ -2,14 +2,16 @@
 
 import React from 'react';
 import Link from 'next/link';
-
+import Image from 'next/image';
 const ColeccionVerano = () => {
     return (
         <div className='flex flex-col py-10 bg-black opacity-90'>
             <div className="relative w-full h-screen md:h-96 overflow-hidden bg-gray-800">
                 {/* Imagen de fondo con capa de oscurecimiento */}
                 <div className="absolute inset-0 bg-black bg-opacity-50">
-                    <img
+                    <Image
+                    width={1000}
+                    height={1000}
                         src="/images/slides/portada.png"
                         alt="Colección Verano"
                         className="w-full h-full object-cover opacity-50"
