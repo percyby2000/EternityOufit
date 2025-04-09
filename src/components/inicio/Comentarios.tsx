@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
+
 
 // Define la estructura de un testimonio
 interface Testimonio {
@@ -31,10 +31,7 @@ const Testimonios: React.FC = () => {
     },
   ];
 
-  // Función para generar la URL del avatar con iniciales
-  const getAvatarUrl = (nombre: string): string => {
-    return `https://ui-avatars.com/api/?name=${encodeURIComponent(nombre)}`;
-  };
+
 
   return (
     <section className="py-16">
@@ -56,13 +53,7 @@ const Testimonios: React.FC = () => {
 
             <div className="flex flex-col items-center">
               <div className="w-16 h-16 rounded-full overflow-hidden mb-4 shadow-md">
-                <Image
-                  src={getAvatarUrl(testimonios[currentIndex].nombre)}
-                  alt={`Avatar de ${testimonios[currentIndex].nombre}`}
-                  width={64}
-                  height={64}
-                  className="object-cover"
-                />
+
               </div>
               <h3 className="font-medium text-gray-900">
                 {testimonios[currentIndex].nombre}
